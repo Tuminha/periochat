@@ -177,7 +177,7 @@ export default function Home() {
                       {message.sourceDocs && (
                           <div className="p-5" key={`sourceDocsAccordion-${index}`}>
                             <Accordion type="single" collapsible className="flex-col">
-                              {message.sourceDocs.slice(0, 2).map((doc, index) => (
+                              {message.sourceDocs.slice(0, 1).map((doc, index) => (
                                 <div key={`messageSourceDocs-${index}`}>
                                   <AccordionItem value={`item-${index}`}>
                                     <AccordionTrigger>
