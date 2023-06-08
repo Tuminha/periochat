@@ -25,7 +25,7 @@ export default function Home() {
   }>({
     messages: [
       {
-        message: 'Hi, what would you like to learn about this document?',
+        message: 'Hi, what would you like to learn about Dentistry?',
         type: 'apiMessage',
       },
     ],
@@ -125,7 +125,7 @@ export default function Home() {
       <Layout>
         <div className="mx-auto flex flex-col gap-4">
           <h1 className="text-2xl font-bold leading-[1.1] tracking-tighter text-center">
-            Chat With Your Docs
+            Chat with Spot Mentor
           </h1>
           <main className={styles.main}>
             <div className={styles.cloud}>
@@ -137,10 +137,10 @@ export default function Home() {
                     icon = (
                       <Image
                         key={index}
-                        src="/bot-image.png"
+                        src="/Periospot ai.png"
                         alt="AI"
-                        width="40"
-                        height="40"
+                        width="60"
+                        height="60"
                         className={styles.boticon}
                         priority
                       />
@@ -150,10 +150,10 @@ export default function Home() {
                     icon = (
                       <Image
                         key={index}
-                        src="/usericon.png"
+                        src="/userperio.png"
                         alt="Me"
-                        width="30"
-                        height="30"
+                        width="60"
+                        height="60"
                         className={styles.usericon}
                         priority
                       />
@@ -190,11 +190,11 @@ export default function Home() {
                                   <AccordionTrigger>
                                     <h3>Source {index + 1}</h3>
                                   </AccordionTrigger>
-                                  <AccordionContent>
+                                  <AccordionContent className="accordion-content">
                                     <ReactMarkdown linkTarget="_blank">
                                       {doc.pageContent}
                                     </ReactMarkdown>
-                                    <p className="mt-2">
+                                    <p className="mt-2" style={{color: "#ffffff"}}>
                                       <b>Source:</b> {doc.metadata.source}
                                     </p>
                                   </AccordionContent>
@@ -224,7 +224,7 @@ export default function Home() {
                     placeholder={
                       loading
                         ? 'Waiting for response...'
-                        : 'What is this legal case about?'
+                        : 'What do you want to learn?'
                     }
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
@@ -237,7 +237,7 @@ export default function Home() {
                   >
                     {loading ? (
                       <div className={styles.loadingwheel}>
-                        <LoadingDots color="#000" />
+                        <LoadingDots color="#fffff" />
                       </div>
                     ) : (
                       // Send icon SVG in input field
@@ -261,8 +261,8 @@ export default function Home() {
           </main>
         </div>
         <footer className="m-auto p-4">
-          <a href="https://twitter.com/mayowaoshin">
-            Powered by LangChainAI. Demo built by Mayo (Twitter: @mayowaoshin).
+          <a href="https://twitter.com/periospot">
+            Powered by Periospot.ai 2023 (Twitter: @Periospot).
           </a>
         </footer>
       </Layout>
