@@ -4,7 +4,7 @@ import { PineconeClient } from '@pinecone-database/pinecone';
 export async function initPinecone() {
   const PINECONE_ENVIRONMENT = 'us-east-1-aws';
   const PINECONE_API_KEY = '4d940a59-e43b-4147-9dfe-5362b5ae7f80';
-  const OPENAI_API_KEY = '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';
+  const OPENAI_API_KEY = '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';
 
   try {
     const pinecone = new PineconeClient();
@@ -15,8 +15,19 @@ export async function initPinecone() {
     });
 
     return pinecone;
-  } catch (error) {
-    console.log('Error initializing Pinecone Client:', error);
-    throw new Error('Failed to initialize Pinecone Client');
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      const axiosError = error as any;
+      if (axiosError.isAxiosError && axiosError.response) {
+        console.log('Axios Error:', axiosError.response.data);
+      } else {
+        console.log('Error:', error.message);
+      }
+      throw new Error('Failed to ingest your data: ' + error.message);
+    } else {
+      console.log('An unknown error occurred');
+      throw error;
+    }
   }
+  
 }
