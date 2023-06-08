@@ -3,8 +3,13 @@ import { PineconeClient } from '@pinecone-database/pinecone';
 // This function is exported so it can be imported in other files
 export async function initPinecone() {
   const PINECONE_ENVIRONMENT = 'us-east-1-aws';
-  const PINECONE_API_KEY = '4d940a59-e43b-4147-9dfe-5362b5ae7f80';
-  const OPENAI_API_KEY = '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';
+  const PINECONE_API_KEY = process.env.PINECONE_API_KEY;
+  const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
+
+  if (!PINECONE_API_KEY || !OPENAI_API_KEY) {
+    throw new Error('Environment variables PINECONE_API_KEY and OPENAI_API_KEY must be set');
+  }
+
 
   try {
     const pinecone = new PineconeClient();
