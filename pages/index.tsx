@@ -193,7 +193,7 @@ export default function Home() {
                                         {doc.pageContent}
                                       </ReactMarkdown>
                                       <p className="mt-2" style={{ color: "#ffffff" }}>
-                                        <b>Source:</b> {doc.metadata.source}
+                                      <b>Source:</b> {doc.metadata.source.startsWith("Source: /Users/") ? "" : doc.metadata.source}
                                       </p>
                                     </AccordionContent>
                                   </AccordionItem>
