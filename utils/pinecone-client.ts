@@ -4,7 +4,7 @@ import { PineconeClient } from '@pinecone-database/pinecone';
 export async function initPinecone() {
   const PINECONE_ENVIRONMENT = 'us-east-1-aws';
   const PINECONE_API_KEY = '4d940a59-e43b-4147-9dfe-5362b5ae7f80';
-  const OPENAI_API_KEY = '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';
+  const OPENAI_API_KEY = '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';
 
   try {
     const pinecone = new PineconeClient();
