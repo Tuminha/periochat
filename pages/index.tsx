@@ -175,35 +175,29 @@ export default function Home() {
                         </div>
                       </div>
                       {message.sourceDocs && (
-                        <div
-                          className="p-5"
-                          key={`sourceDocsAccordion-${index}`}
-                        >
-                          <Accordion
-                            type="single"
-                            collapsible
-                            className="flex-col"
-                          >
-                            {message.sourceDocs.map((doc, index) => (
-                              <div key={`messageSourceDocs-${index}`}>
-                                <AccordionItem value={`item-${index}`}>
-                                  <AccordionTrigger>
-                                    <h3 className="text-white">Source {index + 1}</h3>
-                                  </AccordionTrigger>
-                                  <AccordionContent className="accordion-content text-white">
-                                    <ReactMarkdown linkTarget="_blank">
-                                      {doc.pageContent}
-                                    </ReactMarkdown>
-                                    <p className="mt-2" style={{color: "#ffffff"}}>
-                                      <b>Source:</b> {doc.metadata.source}
-                                    </p>
-                                  </AccordionContent>
-                                </AccordionItem>
-                              </div>
-                            ))}
-                          </Accordion>
-                        </div>
-                      )}
+                          <div className="p-5" key={`sourceDocsAccordion-${index}`}>
+                            <Accordion type="single" collapsible className="flex-col">
+                              {message.sourceDocs.slice(0, 2).map((doc, index) => (
+                                <div key={`messageSourceDocs-${index}`}>
+                                  <AccordionItem value={`item-${index}`}>
+                                    <AccordionTrigger>
+                                      <h3 className="text-white">Source {index + 1}</h3>
+                                    </AccordionTrigger>
+                                    <AccordionContent className="accordion-content text-white">
+                                      <ReactMarkdown linkTarget="_blank">
+                                        {doc.pageContent}
+                                      </ReactMarkdown>
+                                      <p className="mt-2" style={{ color: "#ffffff" }}>
+                                        <b>Source:</b> {doc.metadata.source}
+                                      </p>
+                                    </AccordionContent>
+                                  </AccordionItem>
+                                </div>
+                              ))}
+                            </Accordion>
+                          </div>
+                        )}
+
                     </>
                   );
                 })}
