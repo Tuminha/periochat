@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  border: 0.5px solid white;
+  border: 0.25px solid white;
   border-radius: 10px;
   background-image: url('backgroundimageai.jpeg');
   background-size: cover; /* Resize the background image to cover the entire container */
@@ -23,7 +23,7 @@
   text-align: center !important;
   color: #ffffff;
   background-color: black;
-  font-family: Bariol, sans-serif;
+  font-family: Bariol, sans-serif !important;
 }
 
 
