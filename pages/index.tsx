@@ -149,7 +149,7 @@ export default function Home() {
                     icon = (
                       <Image
                         key={index}
-                        src="/Periospot ai.png"
+                        src="/Periospot logo.png"
                         alt="AI"
                         width="60"
                         height="60"
@@ -162,7 +162,7 @@ export default function Home() {
                     icon = (
                       <Image
                         key={index}
-                        src="/userperio.png"
+                        src="/Periospot user.png"
                         alt="Me"
                         width="60"
                         height="60"
