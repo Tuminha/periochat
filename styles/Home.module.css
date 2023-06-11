@@ -15,7 +15,7 @@
 /* Changing the main div background color */
 
 .mx-auto.flex.flex-col.gap-4 {
-  background-color: black;
+  background-color: black !important;
 }
 
 
