@@ -133,7 +133,7 @@ export default function Home() {
   return (
     <>
       <Layout>
-      <div className={`${styles.container} bg-red-500`}>
+      <div className={`${styles.container} bg-black`}>
 
         <div className="mx-auto flex flex-col gap-4 bg-black">
           <h1 className="text-2xl font-bold leading-[1.1] tracking-tighter text-center text-white bg-black">
@@ -266,7 +266,7 @@ export default function Home() {
             )}
           </main>
         </div>
-        <footer className="m-auto p-4">
+        <footer className="m-auto p-4 text-center">
           <a href="https://twitter.com/periospot">
             Powered by Periospot.ai 2023 (Twitter: @Periospot).
           </a>
