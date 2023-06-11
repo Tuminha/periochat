@@ -49,7 +49,7 @@
   border-radius: 0.5rem;
   border: 1px solid #0f0fa4;
   /* background: rgba(0, 0, 0, 0.8); */ /* Commented out: Original background color */
-  background: (0, 0, 0, 0.); /* Uncommented: Original background color */
+  background: (0, 0, 0, 0.5); /* Uncommented: Original background color */
   color: rgba(0, 0, 0, 0.5);
   outline: none;
 }
