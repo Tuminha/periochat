@@ -12,12 +12,13 @@
   background-repeat: no-repeat; /* Do not repeat the background image */
 }
 
-:root {
-  background-color: red; /* Replace "red" with your desired color */
+
+
+
+/* Changing the body background color */
+body {
+  background-color: black;
 }
-
-
-/* Changing the main div background color */
 
 .cloud {
   background-color: black !important;
