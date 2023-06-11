@@ -19,6 +19,19 @@
 }
 
 
+/* Added Heading style to the Heading class */
+.heading {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.1;
+  text-align: center;
+  color: white;
+  background-color: black;
+  font-family: Bariol, sans-serif;
+}
+
+
+
 .header {
   width: auto;
 }
