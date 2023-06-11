@@ -44,7 +44,7 @@
 }
 
 .textarea::placeholder {
-  color: #ffc430;
+  color: rgba(255, 196, 48, 0.5);
 }
 
 .generatebutton {
