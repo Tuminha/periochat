@@ -1,7 +1,6 @@
 import { useRef, useState, useEffect } from 'react';
 import Layout from '@/components/layout';
 import styles from '@/styles/Home.module.css';
-import { Message } from '@/types/chat';
 import Image from 'next/image';
 import ReactMarkdown from 'react-markdown';
 import LoadingDots from '@/components/ui/LoadingDots';
@@ -12,6 +11,12 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
+
+export type Message = {
+  type: 'userMessage' | 'apiMessage' | 'loadingMessage',
+  message: string,
+  sourceDocs?: Document[],
+};
 
 export default function Home() {
   const [query, setQuery] = useState<string>('');
@@ -103,21 +108,24 @@ export default function Home() {
       if (data.error) {
         setError(data.error);
       } else {
-        setMessageState((state) => ({
-          ...state,
-          messages: [
-            ...state.messages,
-            {
-              type: 'apiMessage',
-              message: data.text,
-              sourceDocs: data.sourceDocuments,
-            },
-          ],
-          history: [...state.history, [question, data.text]],
-        }));
+        setMessageState((state) => {
+          const updatedMessages = state.messages.filter(message => message.type !== 'loadingMessage'); // Remove loading message
+          return {
+            ...state,
+            messages: [
+              ...updatedMessages,
+              {
+                type: 'apiMessage',
+                message: data.text,
+                sourceDocs: data.sourceDocuments,
+              },
+            ],
+            history: [...state.history, [question, data.text]],
+          };
+        });
       }
       console.log('messageState', messageState);
-
+  
       setLoading(false);
 
       //scroll to bottom
@@ -137,7 +145,8 @@ export default function Home() {
       e.preventDefault();
     }
 
-
+   
+    
     
 
 
@@ -146,6 +155,7 @@ export default function Home() {
   return (
     <>
       <Layout>
+      
       
 
         <div className="mx-auto flex flex-col gap-4 bg-black">
@@ -171,6 +181,9 @@ export default function Home() {
                       />
                     );
                     className = styles.apimessage;
+                    } else if (message.type === 'loadingMessage') {
+                      icon = <div className={styles.loadingwheel}><LoadingDots color="#fffff" /></div>;
+                      className = styles.loadingmessage;
                   } else {
                     icon = (
                       <Image
