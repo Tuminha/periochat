@@ -55,20 +55,17 @@ export default function Home() {
     // Add the user's question to the message list
     const question = query.trim();
 
-        setMessageState((state) => ({
-          ...state,
-          messages: [
-            ...state.messages,
-            {
-              type: 'userMessage',
-              message: question,
-            },
-            {
-              type: 'apiMessage',
-              message: '', // Set an empty message for the bot's response
-            },
-          ],
-        }));
+    setMessageState((state) => ({
+      ...state,
+      messages: [
+        ...state.messages.slice(0, -1), // Remove the first user message
+        {
+          type: 'apiMessage',
+          message: '', // Set an empty message for the bot's response
+        },
+      ],
+    }));
+    
 
     setLoading(true);
     setQuery('');
