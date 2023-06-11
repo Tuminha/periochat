@@ -4,9 +4,12 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background-color: transparent;
   border: 1px solid white;
   border-radius: 10px;
+  background-image: url('public/backgroundimageai.jpeg');
+  background-size: cover; /* Resize the background image to cover the entire container */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Do not repeat the background image */
 }
 
 .header {
