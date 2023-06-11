@@ -39,10 +39,12 @@
   width: 75vw;
   border-radius: 0.5rem;
   border: 1px solid #0f0fa4;
-  background: #000;
+  /* background: rgba(0, 0, 0, 0.8); */ /* Commented out: Original background color */
+  background: #000; /* Uncommented: Original background color */
   color: #ffffff;
   outline: none;
 }
+
 
 .textarea:disabled {
   opacity: 0.5;
