@@ -219,7 +219,8 @@ export default function Home() {
                           </ReactMarkdown>
                         </div>
                       </div>
-                      {message.sourceDocs && (
+                     
+                      {/*message.sourceDocs && (
                           <div className="p-5" key={`sourceDocsAccordion-${index}`}>
                             <Accordion type="single" collapsible className="flex-col">
                               {message.sourceDocs.slice(0, 1).map((doc, index) => (
@@ -234,7 +235,7 @@ export default function Home() {
                                       </ReactMarkdown>
                                       <p className="mt-2" style={{ color: "#ffffff" }}>
                                       {/*doc.metadata.title*/}
-                                      <b>Source:</b> {`${doc.metadata.authors}, ${doc.metadata.year}, ${doc.metadata.journal}, ${doc.metadata.doi}`}
+                                      {/*<b>Source:</b> {`${doc.metadata.authors}, ${doc.metadata.year}, ${doc.metadata.journal}, ${doc.metadata.doi}`}
                                       </p>
                                     </AccordionContent>
                                   </AccordionItem>
@@ -242,8 +243,8 @@ export default function Home() {
                               ))}
                             </Accordion>
                           </div>
-                        )}
-
+                              )*/}
+                        
                     </>
                   );
                 })}
