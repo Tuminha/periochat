@@ -12,6 +12,8 @@
   background-repeat: no-repeat; /* Do not repeat the background image */
 }
 
+/* Changing the main div background color */
+
 .mx-auto.flex.flex-col.gap-4 {
   background-color: black; /* Changing the main div background color */
 }
