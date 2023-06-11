@@ -129,7 +129,7 @@
 }
 
 .usermessage {
-  background: #000;
+  background: rgba(0, 0, 0, 0.5);
   padding: 1.5rem;
   color: #ffffff;
 }
