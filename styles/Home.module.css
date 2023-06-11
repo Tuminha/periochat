@@ -234,14 +234,14 @@
 }
 
 .footer {
-  color: #5f6368;
+  color: #000;
   font-size: 0.8rem;
   margin: 1.5rem;
 }
 
 .footer a {
   font-weight: 500;
-  color: #7a7d81;
+  color: #000;
 }
 
 .footer a:hover {
