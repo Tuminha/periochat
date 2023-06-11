@@ -55,20 +55,32 @@ export default function Home() {
     // Add the user's question to the message list
     const question = query.trim();
 
-    setMessageState((state) => ({
-      ...state,
-      messages: [
-        ...state.messages.slice(0, -2), // Remove the two previous messages
-        {
-          type: 'userMessage',
-          message: question,
-        },
-        {
-          type: 'apiMessage',
-          message: '', // Set an empty message for the bot's response
-        },
-      ],
-    }));
+    setMessageState((state) => {
+      const updatedMessages = [...state.messages];
+      
+      // Remove any consecutive user messages before adding the new user message
+      while (
+        updatedMessages.length > 0 &&
+        updatedMessages[updatedMessages.length - 1].type === 'userMessage'
+      ) {
+        updatedMessages.pop();
+      }
+      
+      updatedMessages.push({
+        type: 'userMessage',
+        message: question,
+      });
+    
+      updatedMessages.push({
+        type: 'apiMessage',
+        message: '', // Set an empty message for the bot's response
+      });
+    
+      return {
+        ...state,
+        messages: updatedMessages,
+      };
+    });
     
 
     setLoading(true);
