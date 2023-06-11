@@ -133,7 +133,7 @@ export default function Home() {
   return (
     <>
       <Layout>
-      <div className={`${styles.container} bg-black`}>
+      
 
         <div className="mx-auto flex flex-col gap-4 bg-black">
           <h1 className="heading" style={{ color: '#ffffff', textAlign: 'center' }}>
@@ -271,7 +271,7 @@ export default function Home() {
             Powered by Periospot.ai 2023 (Twitter: @Periospot).
           </a>
         </footer>
-      </div>
+      
       </Layout>
     </>
   );
