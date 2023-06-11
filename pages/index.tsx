@@ -136,7 +136,7 @@ export default function Home() {
       <div className={`${styles.container} bg-black`}>
 
         <div className="mx-auto flex flex-col gap-4 bg-black">
-          <h1 className="heading">
+          <h1 className="heading" style={{ color: '#ffffff', textAlign: 'center' }}>
             Chat with Spot Mentor
           </h1>
           <main className={styles.main}>
