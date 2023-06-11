@@ -58,7 +58,11 @@ export default function Home() {
     setMessageState((state) => ({
       ...state,
       messages: [
-        ...state.messages.slice(0, -1), // Remove the first user message
+        ...state.messages.slice(0, -2), // Remove the two previous messages
+        {
+          type: 'userMessage',
+          message: question,
+        },
         {
           type: 'apiMessage',
           message: '', // Set an empty message for the bot's response
