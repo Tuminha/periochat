@@ -38,8 +38,9 @@
 
 .textarea:focus {
   outline: none;
-  border-color: #6b7280;
-  box-shadow: 0 0 0 3px rgba(156, 163, 175, 0.5);
+  border-radius: 0.5rem;
+  border-color: #0452ef;
+  box-shadow: 0 0 0 3px rgba(7, 7, 7, 0.5);
 }
 
 .textarea::placeholder {
