@@ -20,11 +20,11 @@
 
 
 /* Added Heading style to the Heading class */
-.heading {
+.heading { 
   font-size: 2rem;
   font-weight: bold;
   line-height: 1.1;
-  text-align: center;
+  text-align: center !important;
   color: white;
   background-color: black;
   font-family: Bariol, sans-serif;
