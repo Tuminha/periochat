@@ -266,7 +266,7 @@ export default function Home() {
             )}
           </main>
         </div>
-        <footer className="m-auto p-4 text-center color bg-white" >
+        <footer className="m-auto p-4 text-center color bg-transparent" style={{ color: '#ffffff' }} >
           <a href="https://twitter.com/periospot">
             Powered by Periospot.ai 2023 (Twitter: @Periospot).
           </a>
