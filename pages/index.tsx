@@ -133,6 +133,8 @@ export default function Home() {
   return (
     <>
       <Layout>
+      <div className={`${styles.container} bg-red-500`}>
+
         <div className="mx-auto flex flex-col gap-4 bg-black">
           <h1 className="text-2xl font-bold leading-[1.1] tracking-tighter text-center text-white bg-black">
             Chat with Spot Mentor
@@ -269,6 +271,7 @@ export default function Home() {
             Powered by Periospot.ai 2023 (Twitter: @Periospot).
           </a>
         </footer>
+      </div>
       </Layout>
     </>
   );
