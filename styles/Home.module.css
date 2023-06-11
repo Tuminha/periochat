@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: blue;
 }
 
 .header {
@@ -204,7 +204,7 @@
   height: 65vh;
   background: #000;
   border-radius: 0.5rem;
-  border: 1px solid #d3df2f;
+  border: 1px solid #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
