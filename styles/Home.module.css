@@ -50,7 +50,7 @@
   border: 1px solid #0f0fa4;
   /* background: rgba(0, 0, 0, 0.8); */ /* Commented out: Original background color */
   background: (0, 0, 0, 0.); /* Uncommented: Original background color */
-  color: #ffffff;
+  color: rgba(0, 0, 0, 0.5);
   outline: none;
 }
 
