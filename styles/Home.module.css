@@ -49,7 +49,7 @@
   border-radius: 0.5rem;
   border: 1px solid #0f0fa4;
   /* background: rgba(0, 0, 0, 0.8); */ /* Commented out: Original background color */
-  background: #000; /* Uncommented: Original background color */
+  background: (0, 0, 0, 0.5); /* Uncommented: Original background color */
   color: #ffffff;
   outline: none;
 }
@@ -62,7 +62,7 @@
 .textarea:focus {
   outline: none;
   border-radius: 0.5rem;
-  border-color: #0452ef;
+  border-color: #045dd5;
   box-shadow: 0 0 0 3px rgba(7, 7, 7, 0.1);
 }
 
@@ -246,7 +246,7 @@
 
 .footer {
   color: #ffffff;
-  font-size: 0.8rem;
+  font-size: 0.5rem;
   margin: 1.5rem;
 }
 
