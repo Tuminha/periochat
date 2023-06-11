@@ -52,6 +52,7 @@
   background: rgba(0, 0, 0, 0.5); /* Uncommented: Original background color */
   color: #ffffff;
   outline: none;
+  font-family: 'Arial', sans-serif;
 }
 
 
@@ -64,6 +65,7 @@
   border-radius: 0.5rem;
   border-color: #045dd5;
   box-shadow: 0 0 0 3px #000;
+  font-family: 'Arial', sans-serif;
 }
 
 .textarea::placeholder {
@@ -244,10 +246,10 @@
   opacity: 0.25;
 }
 
-.footer {
+.footer { 
   color: #ffffff;
   font-size: 1rem;/* increased the size a bit for readability */
-  font-family: 'Arial', sans-serif;/* using a simple sans-serif font */
+  font-family: 'Arial', sans-serif !important;  /* using a simple sans-serif font */
   margin: 1.5rem;
 }
 
