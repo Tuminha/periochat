@@ -10,7 +10,7 @@ export default function Layout({ children }: LayoutProps) {
         <div className="h-16 border-b border-b-slate-200 py-4">
           <nav className="ml-4 pl-6">
             {/* Updated "Home" button */}
-            <a href="#" className="hover:text-white cursor-pointer">
+            <a href="#" className="text-white hover:text-gray-400 cursor-pointer">
               Home
             </a>
           </nav>
