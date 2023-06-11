@@ -4,7 +4,7 @@ interface LayoutProps {
 
 export default function Layout({ children }: LayoutProps) {
   return (
-    <div className="mx-auto flex flex-col space-y-4">
+    <div className="mx-auto flex flex-col space-y-4 bg-black">
       {/* Updated header */}
       <header className="container sticky top-0 z-40 bg-black">
         <div className="h-16 border-b border-b-slate-200 py-4">
