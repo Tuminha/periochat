@@ -183,11 +183,11 @@ export default function Home() {
                         priority
                       />
                     );
-                    // The latest message sent by the user will be animated while waiting for a response
+                    // Determine the class based on loading state and message index
                     className =
                       loading && index === messages.length - 1
-                        ? styles.usermessagewaiting
-                        : styles.usermessage;
+                        ? styles.usermessagewaiting // Apply the waiting animation class for the latest user message
+                        : styles.usermessage; // Apply the default class for user messages
                   }
                   return (
                     <>
