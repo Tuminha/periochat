@@ -14,7 +14,7 @@
 
 /* Changing the main div background color */
 
-.mx-auto.flex.flex-col.gap-4 .cloud {
+.cloud {
   background-color: black !important;
 }
 
