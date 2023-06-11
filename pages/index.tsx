@@ -70,15 +70,18 @@ export default function Home() {
       ) {
         updatedMessages.pop();
       }
-      
+          
+      // Add user's message to the message list
       updatedMessages.push({
         type: 'userMessage',
         message: question,
       });
-    
+      
+      // After user's question, add a loading message. This will indicate that the bot is preparing a response.
+    // Note that we're not adding an API message here. The loading message is a placeholder for the API response.
       updatedMessages.push({
-        type: 'apiMessage',
-        message: '', // Set an empty message for the bot's response
+        type: 'loadingMessage',
+        message: '', // There is no message content for a loading state
       });
     
       return {
@@ -109,11 +112,16 @@ export default function Home() {
         setError(data.error);
       } else {
         setMessageState((state) => {
+          // Before adding the API response, we first filter out the loading message from the current state.
           const updatedMessages = state.messages.filter(message => message.type !== 'loadingMessage'); // Remove loading message
+          
+          
           return {
             ...state,
             messages: [
+              // Spread the updatedMessages (which no longer contains the loading message)
               ...updatedMessages,
+              // Then add the API response message
               {
                 type: 'apiMessage',
                 message: data.text,
@@ -124,7 +132,6 @@ export default function Home() {
           };
         });
       }
-      console.log('messageState', messageState);
   
       setLoading(false);
 
