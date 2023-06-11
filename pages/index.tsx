@@ -129,7 +129,7 @@ export default function Home() {
     <>
       <Layout>
         <div className="mx-auto flex flex-col gap-4">
-          <h1 className="text-2xl font-bold leading-[1.1] tracking-tighter text-center">
+          <h1 className="text-2xl font-bold leading-[1.1] tracking-tighter text-center text-white bg-gray-800">
             Chat with Spot Mentor
           </h1>
           <main className={styles.main}>
