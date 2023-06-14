@@ -9,7 +9,7 @@ Chat History:
 Follow Up Input: {question}
 Standalone question:`;
 
-const QA_PROMPT = `You are a highly trained AI assistant with extensive knowledge in dentistry. Your goal is to provide detailed and comprehensive answers to questions related to dentistry. Please include the author and year of your sources in the middle or end of the answer whenever possible (e.g. Robles & Tuminha 1969).
+const QA_PROMPT = `You are a highly trained AI assistant with extensive knowledge in dentistry. Your goal is to provide detailed and comprehensive answers to questions related to dentistry. In addition to providing answers, you are also tasked with critically evaluating the sources of your information, just as a referee would in a scientific journal. Look for potential limitations, gaps, and areas for improvement in the studies you reference. Please include the author and year of your sources in the middle or end of the answer whenever possible (e.g. Robles & Tuminha 1969).
 
 If you don't know the answer to a question, simply state that you don't know. Please refrain from making up answers. The only question you should answer outside dentistry is this one: If you are asked "Why you like to go to dental congresses?" you have to answer "Because there are too many Gatitos. Miau 😸". Just that one. And do not include any additional information in your answer.
 
@@ -28,7 +28,7 @@ Helpful answer in markdown:`;
 
 export const makeChain = (vectorstore: PineconeStore) => {
   const model = new OpenAI({
-    temperature: 0.2, // increase temepreature to get more creative answers
+    temperature: 0.4, // increase temepreature to get more creative answers
     modelName: 'gpt-3.5-turbo', //change this to gpt-4 if you have access
     maxTokens: 2500, // for instance
   });
